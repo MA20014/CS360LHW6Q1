@@ -25,12 +25,6 @@ bool Complex::operator!=(const Complex& operand2) const {
     return !(*this == operand2);
 }
 
-std::ostream& operator<<(std::ostream& output, const Complex& complex) {
-    output << "(" << complex.real << ", " << complex.imaginary << "i)";
-    return output;
-}
-
-std::istream& operator>>(std::istream& input, Complex& complex) {
-    input >> complex.real >> complex.imaginary;
-    return input;
+void Complex::print() const {
+    std::cout << '(' << real << ", " << imaginary << "i)";
 }
