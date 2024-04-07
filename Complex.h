@@ -12,7 +12,8 @@ public:
     Complex operator*(const Complex&) const; // multiplication
     bool operator==(const Complex&) const; // equality
     bool operator!=(const Complex&) const; // inequality
-    void print() const; // output
+    friend std::ostream& operator<<(std::ostream&, const Complex&);
+    friend std::istream& operator>>(std::istream&, Complex&);
 
 private:
     double real; // real part
